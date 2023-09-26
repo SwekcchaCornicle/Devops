@@ -1,7 +1,16 @@
-FROM node:12.2.0-alpine
-WORKDIR app
-COPY . .
+FROM node:10-alpine
+
+RUN mkdir -p /opt/app/node-express-hello-world
+
+COPY node-express-hello-world /opt/app/node-express-hello-world
+
+WORKDIR /opt/app/node-express-hello-world
+
 RUN npm install
-RUN npm run test
-EXPOSE 8000
-CMD ["node","app.js"]
+
+EXPOSE 3000
+
+CMD [ "npm", "start"]
+
+# docker build --tag eis-inventory-api:v1.1 .
+# docker run -it eis-inventory-api:v1.1 /bin/bash
