@@ -1,0 +1,9 @@
+
+
+
+
+
+Srep:1 => Create git repository for weather app and push all your code into main branch
+Step:2 => Create git repository for devops to keep only (Jenkins Pipelines)
+Step:3 => Under devops repo create folders like pipleine, dockerfile/wetherapp/Dockerfile
+Step:4 => Create dockerfile to deploy your application
